@@ -20,6 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Image upload paths
     $targetDir = "../assets/images/";
     $image1Path = $targetDir . basename($image1['name']);
+    $image2Path = $targetDir . basename($image2['name']);
+    $image3Path = $targetDir . basename($image3['name']);
+
     //Moving uploaded files to the target directory
     if ( move_uploaded_file($image1['tmp_name'], $image1Path) &&
          move_uploaded_file($image2['tmp_name'], $image2Path) &&
